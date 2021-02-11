@@ -11,17 +11,21 @@ import Settings from "./components/Settings/Settings";
 
 
 function App(props) {
+
+
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs" component={Dialogs}/>
-                    <Route path="/profile" component={Profile}/>
+                    <Route path="/dialogs" render={() => <Dialogs dialogs={props.appState.profilePage.dialogs}
+                                                                  messages={props.appState.messagesPage.messages}
+                    />}/>
+                    <Route path="/profile" render={() => <Profile posts={props.appState.profilePage.posts}/>}/>
                     <Route path="/music" component={Music}/>
-                    <Route path="/news" component={News} />
-                    <Route path="/settings" component={Settings} />
+                    <Route path="/news" component={News}/>
+                    <Route path="/settings" component={Settings}/>
                 </div>
             </div>
         </BrowserRouter>

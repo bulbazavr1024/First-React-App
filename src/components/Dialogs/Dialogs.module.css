@@ -8,18 +8,35 @@
 }
 
 .dialog {
+    color: white;
+    padding: 10px;
 
 }
 
-.dialogsItems .active {
-   color: gold;
+.dialog img {
+    width: 40px;
+    padding-right: 10px;
 }
+
+.dialogsItems a {
+    color: white;
+    text-decoration: none;
+}
+
+.dialogsItems a.active {
+    color: gold;
+}
+
+
 
 .messages {
     padding: 10px;
 }
 
 .message {
-
+    color: white;
+    padding: 10px;
 }
+
+
 
