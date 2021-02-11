@@ -14,15 +14,10 @@ const MyPosts = (props) => {
     let onPostChange = () => {
         let text = newPostElement.current.value;
         props.updatePostText(text);
-
-
     }
 
     let addPost = () => {
-        let text = newPostElement.current.value;
-
-        props.addPost(text);
-        props.updatePostText('')
+        props.addPost();
     }
 
     return (
