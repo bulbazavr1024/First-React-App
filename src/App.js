@@ -19,12 +19,15 @@ function App(props) {
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs" render={() => <Dialogs dialogs={props.appState.profilePage.dialogs}
+                    <Route path="/dialogs" render={() => <Dialogs dialogs={props.appState.messagesPage.dialogs}
                                                                   messages={props.appState.messagesPage.messages}
                     />}/>
                     <Route path="/profile"
                            render={() => <Profile posts={props.appState.profilePage.posts}
-                                                  addPost={props.addPost}/>}/>
+                                                  addPost={props.addPost}
+                                                  updatePostText={props.updatePostText}
+                                                  newPost={props.appState.profilePage.newPostText}/>}/>
+
                     <Route path="/music" component={Music}/>
                     <Route path="/news" component={News}/>
                     <Route path="/settings" component={Settings}/>
