@@ -41,14 +41,20 @@ export const addPost = () => {
     rerenderEntireTree(state);
 }
 
-export const updatePostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    rerenderEntireTree(state);
+export const addPostActionCreator = () => {
 
+    return {
+        type: ADD_POST
+    }
+}
+
+export const updateNewPostTextActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_POST_TEXT, newText: text
+    }
 }
 
 
-export let subscribe = (observer) => {
-    rerenderEntireTree = observer
-}
-export default state;
+export default store;
+
+window.store = store
