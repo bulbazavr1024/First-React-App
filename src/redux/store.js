@@ -2,11 +2,6 @@ import profileReducer from "./profile_reducer";
 import dialogsReducer from "./dialogs_reducer";
 import sidebarReducer from "./sidebar_reducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE_NEW_MESSAGE_BODY';
-const SEND_MESSAGE = 'SEND_MESSAGE';
-
 let store = {
     _state: {
         profilePage: {
@@ -16,7 +11,7 @@ let store = {
                 {id: 3, message: 'Blabla', likesCount: 11},
                 {id: 4, message: 'Dada', likesCount: 11}
             ],
-            newPostText: 'it-kamasutra.com'
+            newPostText: 'New message for your friends'
         },
         dialogsPage: {
             dialogs: [
@@ -34,7 +29,7 @@ let store = {
                 {id: 4, message: 'Yo'},
                 {id: 5, message: 'Yo'}
             ],
-            newMessageBody: ""
+            newMessageBody: "New message c'mon"
         },
         sidebar: {}
     },
@@ -43,7 +38,7 @@ let store = {
     },
 
     getState() {
-        debugger;
+
         return this._state;
     },
     subscribe(observer) {
@@ -61,14 +56,6 @@ let store = {
 
     }
 }
-
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) =>
-    ({type: UPDATE_NEW_POST_TEXT, newText: text})
-
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-export const updateNewMessageBodyCreator = (body) =>
-    ({type: UPDATE_NEW_MESSAGE_BODY, body: body})
 
 export default store;
 window.store = store;
