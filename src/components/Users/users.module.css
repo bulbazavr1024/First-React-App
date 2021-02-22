@@ -5,6 +5,15 @@
 
 .selectedPage {
     display: inline-block;
-    cursor: pointer;
     font-weight: bold;
+}
+
+.items {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.users {
+    text-align: center;
 }
