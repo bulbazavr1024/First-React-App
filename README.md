@@ -1,4 +1,4 @@
-# First React App 
+# React App  
 **The educational project was carried out by Pavel Ageikin**
 ## Technologies:
  - React
