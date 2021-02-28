@@ -1,14 +1,15 @@
 import React from 'react';
-import s from './News.module.css';
+import s from './News.module.css'
 
 const News = (props) => {
     return (
-        <div className={s.content}>
-            News
+        <div className={s.price}>
+            <div>bitcoin = {props.bitcoin}</div>
+            <div>ethereum = {props.ethereum}</div>
+            <div>pangolin = {props.pangolin}</div>
         </div>
-
     )
 
 }
 
-export default News;
+export default News
