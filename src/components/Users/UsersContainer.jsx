@@ -12,8 +12,6 @@ import axios from "axios";
 import Users from "./Users";
 import Preloader from "../../Preloader/Preloader";
 
-
-
 class UsersContainer extends React.Component {
 
     componentDidMount() {
